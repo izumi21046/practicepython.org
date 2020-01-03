@@ -1,0 +1,11 @@
+BirthDay = {
+    "Alli": "Jan 1, 1990",
+    "David": "Jul 16, 1980",
+    "Daniel": "Dec 31, 1970"}
+
+def BD_lookup():
+    print("Welcome to the birthday dictionary. We know the birthdays of: ")
+    for key in BirthDay:
+        print(key)
+    name = input("Who\'s birthday do you want to look up?\n")
+    print(name + "\'s Birthday is "+ BirthDay.get(name,"not on list"))
