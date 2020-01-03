@@ -1,0 +1,11 @@
+# practicepython.org
+# Exercise 22
+
+name_file = open(r"C:\Users\izumi\Desktop\name.txt","r")
+
+count = 0
+for name in name_file.readlines():
+    count += 1
+print(count)
+
+name_file.close()
