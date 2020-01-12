@@ -1,0 +1,10 @@
+def palindrome():
+	new_word=''
+	word=input('enter a word: ')
+	for i in range(len(word)):
+		new_word=new_word + word[len(word)-1-i]
+	if new_word == word:
+		msg=f'{word} is palindrome!!'
+	else:
+	  msg=f'{word} is not palindrome.'
+	return(msg)
