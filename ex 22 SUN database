@@ -1,0 +1,15 @@
+with open(r'C:\Users\izumi\Desktop\sun_image.txt','r') as rf:
+	line=rf.readline()
+	count=0				
+	img_dict = {}
+	img_dict.update({line.split('/')[2]:0})
+	while line:
+		new_line=line.split('/')
+		if new_line[2] in img_dict:
+			img_dict[new_line[2]]+=1
+		else:
+			img_dict.update({new_line[2]:0})
+		line = rf.readline()
+		count+=1
+	print(count)				
+	print(img_dict)
