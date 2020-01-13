@@ -1,0 +1,22 @@
+with open(r'C:\Users\izumi\Desktop\primenum.txt','r') as pf:
+	with open(r'C:\Users\izumi\Desktop\happynum.txt','r') as hf:
+		pf_list=[x.rstrip() for x in pf]
+
+		# pf_list=[]
+		# for p_num in pf:
+		#	  pf_list.append(p_num.rstrip())
+
+		hf_list=[y.rstrip() for y in hf]
+
+		# hf_list=[]
+		# for h_num in hf:
+		#	  hf_list.append(h_num.rstrip())
+
+		overlap=[p for p in pf_list if p in hf_list]
+
+		# overlap=[]
+		# for p in pf_list:
+		#	  if p in hf_list:
+		#		  overlap.append(p)
+		
+		print(overlap)
