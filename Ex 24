@@ -1,0 +1,17 @@
+def game(size):
+	for k in range(size):
+		dots = []
+		v_line = []
+		count=0
+		count2=0
+		while(count < size):
+			dots += ' ---'
+			count += 1
+		print(dots)
+		while(count2 <= size):
+			v_line += '|   '
+			count2 += 1
+		print(v_line)
+	print(dots)
+  
+game(int(input('what size of game board you want to draw?: ')))
