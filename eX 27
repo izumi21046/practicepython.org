@@ -1,0 +1,30 @@
+def ttt():
+	new=[[0,0,0],[0,0,0],[0,0,0]]
+	count = 0
+	count2 = 0
+	print(new)
+	item = 0
+	if item in new: # NOT WORKIN
+		while(count < 1):
+		
+			x_row = int(input('pick row of X: '))
+			x_col = int(input('pick column of X: '))
+			if new[x_row][x_col] == 0:
+				new[x_row][x_col] = 'X'
+				print(new)
+				count += 1
+			else:
+				print('N/A. choose different row/col')
+				print(new)
+
+		while(count2 < 1):
+			#y_row, y_col=None
+			y_row = int(input('pick row of Y: '))
+			y_col = int(input('pick column of Y: '))
+			if new[y_row][y_col] == 0:
+				new[y_row][y_col] = 'Y'
+				print(new)
+				count2 += 1
+			else:
+				print('N/A. choose different row/col')
+				print(new)
