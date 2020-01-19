@@ -1,0 +1,29 @@
+# for x in range(len(test)):
+#	for y in range(len(test[x])):
+#		print(test[x][y])
+
+def check(tic):
+	# check rows
+	for x in range(0,3): 
+		check_h = set([tic[x][0],tic[x][1],tic[x][2]])
+		if len(check_h) == 1 and tic[x][0] != 0:
+			return('horizontal ' +  str(tic[x][0]))
+	# check columns
+	for y in range(0,3):
+		check_v = set([tic[0][y],tic[1][y],tic[2][y]])
+		if len(check_v) == 1 and tic[0][y] != 0:
+			return('vertical ' +  str(tic[0][y]))
+	# check diagnals
+	diag1=set([tic[0][0],tic[1][1],tic[2][2]])
+	diag2=set([tic[2][0],tic[1][1],tic[0][2]])
+	if len(diag1)==1 or len(diag2)==1 and tic[1][1] != 0:
+		return('diagnal ' + str(tic[1][1]))
+	
+	return('no winner')
+  
+  game_col = [[1, 2, 0],[1, 2, 0], [0, 2, 1]]
+  game_row = [[1, 2, 0],[2, 2, 0], [1, 1, 1]]
+  game_diag = [[2, 1, 0],[2, 2, 0], [1, 1, 2]]
+  game_nowinner = [[1, 2, 0],[2, 0, 1], [0, 2, 1]]
+  
+  print('winner of tic tac toe is '+ check(game_diag))
